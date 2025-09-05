@@ -4,7 +4,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Skills from "../components/Skills";
 import Experience from "../components/Experience";
-import Projects from "../components/Projects.jsx/index.js";
+import Projects from "../components/Projects.jsx";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import CaseStudy from "../components/CaseStudy.jsx";

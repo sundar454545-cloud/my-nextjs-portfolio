@@ -12,6 +12,8 @@ import {
   ArrowLeft,
 } from "lucide-react";
 
+// Demo comment
+
 // Demo Pages
 import AmazonHomePage from "../components/amazon-demo/pages/AmazonHomePage";
 import AmazonProductsPage from "../components/amazon-demo/pages/AmazonProductsPage";

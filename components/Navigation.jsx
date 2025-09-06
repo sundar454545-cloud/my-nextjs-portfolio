@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
-import { Sun, Moon, ArrowLeft } from 'lucide-react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { Sun, Moon, ArrowLeft } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Navigation({ theme, toggleTheme, view, setView }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -10,51 +10,60 @@ export default function Navigation({ theme, toggleTheme, view, setView }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    if (view === 'portfolio') {
-      window.addEventListener('scroll', handleScroll);
+    if (view === "portfolio") {
+      window.addEventListener("scroll", handleScroll);
     } else {
       setIsScrolled(true);
     }
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, [view]);
 
   const scrollToSection = (sectionId) => {
-    setView('portfolio');
+    setView("portfolio");
     setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          const navHeight = 80;
-          const elementPosition = element.offsetTop - navHeight;
-          window.scrollTo({ 
-            top: elementPosition, 
-            behavior: 'smooth' 
-          });
-        }
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const navHeight = 80;
+        const elementPosition = element.offsetTop - navHeight;
+        window.scrollTo({
+          top: elementPosition,
+          behavior: "smooth",
+        });
+      }
     }, 100);
   };
-  
+
   const handleLogoClick = () => {
-    if (view === 'portfolio') {
-      scrollToSection('home');
+    if (view === "portfolio") {
+      scrollToSection("home");
     } else {
-      setView('portfolio');
+      setView("portfolio");
     }
-  }
+  };
 
   return (
-    <motion.nav 
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled 
-          ? 'bg-background/80 backdrop-blur-lg border-b border-border' 
-          : 'bg-transparent border-b border-transparent'
+        isScrolled
+          ? "backdrop-blur-lg border-b border-white/20 dark:border-white/10"
+          : "bg-transparent border-b border-transparent"
       }`}
+      style={{
+        background: isScrolled
+          ? theme === "dark"
+            ? "rgba(0, 0, 0, 0.25)" // darker glass
+            : "rgba(255, 255, 255, 0.08)" // lighter glass
+          : "transparent",
+        WebkitBackdropFilter: "blur(12px)",
+        backdropFilter: "blur(12px)",
+      }}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          <motion.div 
+          <motion.div
             whileHover={{ scale: 1.05 }}
             className="font-bold text-2xl text-foreground cursor-pointer"
             onClick={handleLogoClick}
@@ -63,10 +72,10 @@ export default function Navigation({ theme, toggleTheme, view, setView }) {
           </motion.div>
 
           <div className="flex items-center gap-4">
-            {view !== 'portfolio' ? (
+            {view !== "portfolio" ? (
               <Button
                 variant="ghost"
-                onClick={() => setView('portfolio')}
+                onClick={() => setView("portfolio")}
                 className="text-muted-foreground hover:text-foreground font-medium"
               >
                 <ArrowLeft className="w-4 h-4 mr-2" />
@@ -75,20 +84,20 @@ export default function Navigation({ theme, toggleTheme, view, setView }) {
             ) : (
               <Button
                 variant="ghost"
-                onClick={() => setView('caseStudy')}
+                onClick={() => setView("caseStudy")}
                 className="text-muted-foreground hover:text-foreground font-medium text-base"
               >
                 Case Study
               </Button>
             )}
-            
-            <Button 
-              onClick={() => scrollToSection('contact')}
+
+            <Button
+              onClick={() => scrollToSection("contact")}
               className="hidden sm:inline-flex bg-primary hover:bg-primary/90 text-primary-foreground font-semibold"
             >
               Contact Me
             </Button>
-            
+
             <Button
               variant="ghost"
               size="icon"

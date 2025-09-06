@@ -59,14 +59,19 @@ const ThemeStyle = () => (
 );
 
 export default function Portfolio() {
-  const [theme, setTheme] = useState("light");
+  // ✅ Start in dark mode
+  const [theme, setTheme] = useState("dark");
   const [view, setView] = useState("portfolio"); // portfolio, caseStudy, demo
 
+  // Load saved theme if it exists, otherwise keep dark
   useEffect(() => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
   }, []);
 
+  // Apply theme to <html>
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
@@ -81,10 +86,7 @@ export default function Portfolio() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [view]);
 
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
-
+  // Smooth scrolling globally
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
     return () => {
@@ -92,6 +94,12 @@ export default function Portfolio() {
     };
   }, []);
 
+  // Toggle theme
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  };
+
+  // Page rendering
   const renderContent = () => {
     switch (view) {
       case "caseStudy":

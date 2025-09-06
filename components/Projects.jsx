@@ -7,7 +7,7 @@ const projects = [
     title: "Brokerage Flow Redesign",
     company: "RT Specialty & Orchid Insurance",
     description:
-      "Led the UI/UX redesign of a complex brokerage workflow, enhancing usability for brokers and clients.",
+      "Led the UI/UX redesign of a complex brokerage workflow, enhancing usability for brokers and clients. Worked on creating detailed wireframes, PDF form screens, and building interactive prototypes to visualize solutions effectively. Designed clear user flows to simplify navigation, reduce friction, and improve overall efficiency across the platform. Collaborated closely with stakeholders to align design decisions with business objectives and regulatory requirements.",
     image:
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1470",
   },
@@ -15,7 +15,7 @@ const projects = [
     title: "Internal POC Insurance Website",
     company: "Solartis",
     description:
-      "Independently designed and delivered a functional proof-of-concept for a user-centered insurance platform.",
+      "Independently designed and delivered a functional proof-of-concept for a user-centered insurance platform, showcasing how design can drive measurable business impact. Led the end-to-end process — from conducting user research and identifying key pain points to creating wireframes, interactive prototypes, and user flows. The solution not only simplified complex insurance processes but also demonstrated improved usability, efficiency, and potential for higher user adoption.",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1415",
   },
@@ -23,7 +23,7 @@ const projects = [
     title: "Insurance Management System",
     company: "Solartis",
     description:
-      "Revamped an internal insurance platform, focusing on major usability improvements based on user-centric analysis.",
+      "Revamped an internal insurance platform with a strong focus on usability improvements driven by user-centric analysis. Led a design team of three, including myself, to completely redesign the existing design system through user research, identification of key pain points, and alignment with company expectations. Implemented design testing methodologies, including A/B testing, to validate design decisions and ensure measurable improvements. This effort streamlined workflows, improved consistency, and delivered a more intuitive experience for internal users.",
     image:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1470",
   },
@@ -31,7 +31,7 @@ const projects = [
     title: "ERC Management Tool",
     company: "Internal Project",
     description:
-      "Contributed as a UI Designer to create visually consistent and user-friendly interfaces for a management tool.",
+      "Contributed as a UI Designer to build visually consistent and user-friendly interfaces for a management tool. Collaborated within a team of four designers, where I effectively delivered the screens assigned to me while ensuring alignment with the overall design system and project goals. My work emphasized consistency, usability, and attention to detail, supporting the team in creating a cohesive and intuitive product experience.",
     image:
       "https://images.unsplash.com/photo-1600267175161-cfaa711b4a81?q=80&w=1470",
   },

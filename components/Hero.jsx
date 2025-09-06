@@ -56,7 +56,8 @@ export default function Hero() {
         >
           I'm Sundarkarthik, crafting intuitive and user-centered digital
           experiences that bridge business goals with user needs. Based in Tamil
-          Nadu, India.
+          Nadu, India, I specialize in creating designs that are not only
+          visually engaging but also meaningful and impactful.
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex gap-4">

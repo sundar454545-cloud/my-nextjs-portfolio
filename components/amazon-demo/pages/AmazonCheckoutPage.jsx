@@ -144,7 +144,7 @@ export default function AmazonCheckoutPage() {
                     htmlFor="existing"
                     className="flex-grow cursor-pointer"
                   >
-                    <div className="font-medium">Sundar</div>
+                    <div className="font-medium">SundarKarthik</div>
                     <div className="text-sm text-muted-foreground">
                       123 Main Street
                       <br />
@@ -223,7 +223,7 @@ export default function AmazonCheckoutPage() {
                   <Label htmlFor="card" className="flex-grow cursor-pointer">
                     <div className="flex items-center gap-2 font-medium mb-3">
                       <CreditCard className="w-4 h-4" />
-                      Card
+                      Debit/Credit Card
                     </div>
                     {selectedPayment === "card" && (
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/customcard";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Star } from "lucide-react";
 

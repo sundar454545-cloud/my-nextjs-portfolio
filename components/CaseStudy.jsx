@@ -1232,8 +1232,28 @@ export default function CaseStudy({ setView }) {
           <div className="w-24 h-1.5 bg-primary mx-auto mb-8 rounded-full"></div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Experience the complete redesigned Amazon website with all
-            interactive features, dashboard analytics, and optimized user flows.
+            Explore the fully redesigned Amazon website with interactive
+            features, dashboard analytics, and optimized user flows. Access{" "}
+            <span className="font-semibold text-[#34A853] dark:text-[#34A853]">
+              Home
+            </span>
+            ,{" "}
+            <span className="font-semibold text-[#34A853] dark:text-[#34A853]">
+              Products
+            </span>
+            , and{" "}
+            <span className="font-semibold text-[#34A853] dark:text-[#34A853]">
+              Checkout
+            </span>{" "}
+            links in the{" "}
+            <span className="font-semibold text-[#FF9900] dark:text-[#FF9900]">
+              Header
+            </span>{" "}
+            on desktop/tablet or the{" "}
+            <span className="font-semibold text-[#FF9900] dark:text-[#FF9900]">
+              Menu bar
+            </span>{" "}
+            on mobile.
           </p>
 
           <Button

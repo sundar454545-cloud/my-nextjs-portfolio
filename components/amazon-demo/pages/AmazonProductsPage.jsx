@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/customcard";
 import { Button } from "@/components/ui/button";
 import { Star, Tag, Heart } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";

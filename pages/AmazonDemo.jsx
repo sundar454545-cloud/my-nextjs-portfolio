@@ -1,18 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import {
-  Sun,
-  Moon,
-  Search,
-  ShoppingCart,
-  MapPin,
-  User,
-  Menu,
-  X,
-  ArrowLeft,
-} from "lucide-react";
-
-// Demo comment
+import { Sun, Moon, Search, ShoppingCart, MapPin, Menu, X } from "lucide-react";
 
 // Demo Pages
 import AmazonHomePage from "../components/amazon-demo/pages/AmazonHomePage";
@@ -23,9 +11,10 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-20 z-30 bg-[#131921] text-white">
+    <header className="sticky top-0 z-30 bg-[#131921] text-white">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
+          {/* Logo + Location */}
           <div className="flex items-center gap-4">
             <button
               className="text-2xl font-bold"
@@ -42,6 +31,7 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
             </div>
           </div>
 
+          {/* Search */}
           <div className="hidden lg:flex flex-grow max-w-2xl mx-4">
             <div className="flex w-full">
               <input
@@ -55,6 +45,7 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
             </div>
           </div>
 
+          {/* Nav Buttons */}
           <div className="hidden lg:flex items-center gap-6">
             <Button
               variant="ghost"
@@ -97,6 +88,7 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
             </div>
           </div>
 
+          {/* Mobile Menu Toggle */}
           <div className="lg:hidden">
             <Button
               variant="ghost"
@@ -108,6 +100,7 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
           </div>
         </div>
       </div>
+
       {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="lg:hidden bg-[#232f3e] p-4 space-y-3">
@@ -153,57 +146,71 @@ const DemoHeader = ({ page, setPage, toggleTheme, theme }) => {
   );
 };
 
-const DemoFooter = () => (
-  <footer className="bg-[#232f3e] text-white">
-    <div className="bg-[#37475a] py-4">
-      <p className="text-center text-sm">Back to top</p>
-    </div>
-    <div className="container mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-      <div>
-        <h4 className="font-bold mb-3">Get to Know Us</h4>
-        <ul className="space-y-2 text-sm text-gray-300">
-          <li>Careers</li>
-          <li>Blog</li>
-          <li>About Amazon</li>
-        </ul>
+const DemoFooter = () => {
+  const handleBackToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  return (
+    <footer className="bg-[#232f3e] text-white">
+      {/* Back to Top */}
+      <div
+        className="bg-[#37475a] py-4 cursor-pointer hover:bg-[#465769] transition"
+        onClick={handleBackToTop}
+      >
+        <p className="text-center text-sm font-medium">Back to top</p>
       </div>
-      <div>
-        <h4 className="font-bold mb-3">Make Money with Us</h4>
-        <ul className="space-y-2 text-sm text-gray-300">
-          <li>Sell products on Amazon</li>
-          <li>Sell on Amazon Business</li>
-          <li>Become an Affiliate</li>
-        </ul>
+
+      {/* Footer Links */}
+      <div className="container mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <h4 className="font-bold mb-3">Get to Know Us</h4>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li>Careers</li>
+            <li>Blog</li>
+            <li>About Amazon</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-3">Make Money with Us</h4>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li>Sell products on Amazon</li>
+            <li>Sell on Amazon Business</li>
+            <li>Become an Affiliate</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-3">Amazon Payment Products</h4>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li>Amazon Business Card</li>
+            <li>Shop with Points</li>
+            <li>Reload Your Balance</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-bold mb-3">Let Us Help You</h4>
+          <ul className="space-y-2 text-sm text-gray-300">
+            <li>Your Account</li>
+            <li>Your Orders</li>
+            <li>Shipping Rates & Policies</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h4 className="font-bold mb-3">Amazon Payment Products</h4>
-        <ul className="space-y-2 text-sm text-gray-300">
-          <li>Amazon Business Card</li>
-          <li>Shop with Points</li>
-          <li>Reload Your Balance</li>
-        </ul>
+
+      {/* Copyright */}
+      <div className="bg-[#131921] py-6 text-center text-xs text-gray-400">
+        <p>
+          © 1996-2024, Amazon.com, Inc. or its affiliates (Conceptual Redesign)
+        </p>
       </div>
-      <div>
-        <h4 className="font-bold mb-3">Let Us Help You</h4>
-        <ul className="space-y-2 text-sm text-gray-300">
-          <li>Your Account</li>
-          <li>Your Orders</li>
-          <li>Shipping Rates & Policies</li>
-        </ul>
-      </div>
-    </div>
-    <div className="bg-[#131921] py-6 text-center text-xs text-gray-400">
-      <p>
-        © 1996-2024, Amazon.com, Inc. or its affiliates (Conceptual Redesign)
-      </p>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default function AmazonDemo({ setView, theme, toggleTheme }) {
   const [page, setPage] = useState("home");
 
-  // Auto-scroll to top when page changes within demo
+  // Auto-scroll to top when page changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [page]);

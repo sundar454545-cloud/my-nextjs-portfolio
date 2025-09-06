@@ -65,8 +65,10 @@ export default function About() {
           <div className="w-24 h-1.5 bg-primary mx-auto mb-8 rounded-full"></div>
           <p className="text-lg text-muted-foreground">
             With over 3 years of experience, I specialize in UI/UX Design for US
-            Insurance companies, creating seamless, impactful, and user-centered
-            digital experiences.
+            insurance companies, crafting seamless and user-centered digital
+            experiences that align with business objectives. My work focuses on
+            creating impactful designs that simplify complex workflows while
+            enhancing usability and customer satisfaction.
           </p>
         </motion.div>
 

@@ -55,9 +55,9 @@ export default function Hero() {
           className="text-lg md:text-xl text-muted-foreground max-w-2xl"
         >
           I'm Sundarkarthik, crafting intuitive and user-centered digital
-          experiences that bridge business goals with user needs. Based in Tamil
-          Nadu, India, I specialize in creating designs that are not only
-          visually engaging but also meaningful and impactful.
+          experiences that bridge business goals with user needs. Based in
+          India, I specialize in creating designs that are not only visually
+          engaging but also meaningful and impactful.
         </motion.p>
 
         <motion.div variants={itemVariants} className="flex gap-4">
